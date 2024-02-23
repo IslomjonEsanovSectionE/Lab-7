@@ -12,6 +12,7 @@ function addTask() {
     let taskList = document.getElementById('taskList');
     let newTask = document.createElement('li');
     newTask.innerHTML = 'Task'+taskCounter+'<input type="button" value="remove" class="remove">';
+    newTask.querySelector('.remove').addEventListener('click', removeTask);
     taskList.appendChild(newTask);
 }
 
